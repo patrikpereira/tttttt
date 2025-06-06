@@ -246,18 +246,7 @@
           if (dados.tecnico) document.getElementById("tecnicoEquipe").value = dados.tecnico;
           if (dados.cliente) document.getElementById("cliente").value = dados.cliente;
           if (dados.data) document.getElementById("dataOrcamento").value = dados.data;
-          
-          // Restaura o tipo selecionado
-          if (dados.tipo) {
-            const radio = document.querySelector(`input[name="tipo"][value="${dados.tipo}"]`);
-            if (radio) {
-              radio.checked = true;
-              // Desabilita os radios
-              document.querySelectorAll('input[name="tipo"]').forEach(r => {
-                r.disabled = true;
-              });
-            }
-          }
+        
         }
         
         
@@ -288,7 +277,7 @@ let tipoTravado = true;
       tipoTravado = false;
       
       // Salva o estado no localStorage
-      localStorage.setItem('tipoTravado', 'true');
+      localStorage.setItem('tipoTravado', 'false');
       localStorage.setItem('tipoSelecionado', radio.value);
 
       // Desabilita os radio buttons
